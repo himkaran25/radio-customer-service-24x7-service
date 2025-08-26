@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Call now for support — fast, friendly help. TFN: +1 (888) 264-2385" />
+  <title>Call Now — +1 (888) 264-2385 | Fast Support</title>
+
+  <!-- Basic schema for TFN -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Radio Support Hotline",
+    "telephone": "+1-888-264-2385",
+    "url": "https://yourdomain.example"
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- jQuery (CDN) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-3gJwYp4/0+JW4oZqU5eQv+0q6Xc0Vb2u0E2b0iJT7n4=" crossorigin="anonymous"></script>
+
+  <style>
+    :root{
+      --accent:#0B71F0;
+      --accent-dark:#0654C7;
+      --muted:#6b7280;
+      --bg:#f7fbff;
+      --card:#ffffff;
+      --radius:14px;
+      --max-width:1100px;
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg, var(--bg), #ffffff);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      margin:0 auto;
+    }
+
+    .hero{
+      background:linear-gradient(90deg, rgba(11,113,240,0.06), rgba(6,84,199,0.03));
+      border-radius:var(--radius);
+      padding:36px;
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:28px;
+      align-items:center;
+      box-shadow: 0 6px 30px rgba(11,71,150,0.06);
+    }
+
+    /* left hero */
+    .hero-left h1{
+      margin:0 0 8px 0;
+      font-size: clamp(28px, 3.6vw, 44px);
+      line-height:1.02;
+      letter-spacing:-0.02em;
+    }
+    .eyebrow{
+      display:inline-block;
+      background:rgba(11,113,240,0.12);
+      color:var(--accent-dark);
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:13px;
+      margin-bottom:12px;
+    }
+    .lead{
+      margin:16px 0 22px 0;
+      color:var(--muted);
+      font-size:16px;
+    }
+    .phone-large{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:16px;
+      flex-wrap:wrap;
+    }
+    .phone-pill{
+      background:var(--card);
+      border-radius:12px;
+      padding:12px 18px;
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      box-shadow:0 6px 18px rgba(11,71,150,0.06);
+    }
+    .phone-pill .num{
+      font-weight:800;
+      font-size:20px;
+      color:var(--accent-dark);
+    }
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 18px;
+      border-radius:12px;
+      font-weight:700;
+      text-decoration:none;
+      cursor:pointer;
+      border:none;
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{
+      background:linear-gradient(180deg,var(--accent),var(--accent-dark));
+      color:white;
+      box-shadow: 0 8px 28px rgba(11,113,240,0.18);
+    }
+    .btn-ghost{
+      background:transparent;
+      color:var(--accent-dark);
+      border:1px solid rgba(11,113,240,0.12);
+      padding:10px 14px;
+    }
+
+    .benefits{
+      display:flex;
+      gap:12px;
+      margin-top:18px;
+      flex-wrap:wrap;
+    }
+    .benefit{
+      background:var(--card);
+      border-radius:10px;
+      padding:10px 12px;
+      box-shadow:0 6px 18px rgba(2,6,23,0.03);
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    /* right hero (form) */
+    .card{
+      background:linear-gradient(180deg,#ffffff,#fbfdff);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 8px 30px rgba(2,6,23,0.04);
+    }
+    .form-title{
+      font-weight:700;
+      margin:0 0 8px 0;
+    }
+    label{display:block;font-size:13px;margin:10px 0 6px;color:var(--muted)}
+    input[type="text"], input[type="email"], input[type="tel"], textarea, select{
+      width:100%;
+      padding:12px;
+      border-radius:10px;
+      border:1px solid #e6eefc;
+      outline:none;
+      font-size:15px;
+      background:#fbfdff;
+    }
+    textarea{min-height:90px; resize:vertical}
+    .small{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:8px;
+    }
+
+    /* section styles */
+    .section{
+      margin-top:26px;
+      padding:26px;
+      border-radius:12px;
+      background:transparent;
+    }
+
+    .features-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+    .feature-card{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(2,6,23,0.03);
+    }
+    .feature-card h4{margin:0 0 8px 0}
+    .feature-card p{margin:0;color:var(--muted)}
+
+    /* footer */
+    footer{
+      margin-top:20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* modal */
+    .modal-backdrop{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(2,6,23,0.5);
+      align-items:center;
+      justify-content:center;
+      z-index:1200;
+      padding:24px;
+    }
+    .modal{
+      background:white;
+      border-radius:12px;
+      width:100%;
+      max-width:520px;
+      padding:20px;
+      box-shadow:0 20px 60px rgba(2,6,23,0.35);
+    }
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr; padding:22px}
+      .features-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      body{padding:14px}
+      .features-grid{grid-template-columns:1fr}
+      .hero-left h1{font-size:26px}
+      .phone-pill .num{font-size:18px}
+    }
+
+    /* tiny helper */
+    .muted{color:var(--muted)}
+    .badge{background:rgba(34,197,94,0.12); color:#166534; padding:6px 10px; border-radius:999px; font-weight:700; font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;gap:12px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect rx='8' width='100%' height='100%' fill='%230B71F0'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='white'>RS</text></svg>" alt="logo" width="40" height="40" />
+        <div>
+          <div style="font-weight:700">Radio Support Hotline</div>
+          <div style="font-size:12px;color:#6b7280">Open 24/7 • English & Spanish</div>
+        </div>
+      </div>
+
+      <a href="tel:+18882642385" class="btn btn-ghost" aria-label="Call +1 (888) 264-2385">Call Now: +1 (888) 264-2385</a>
+    </header>
+
+    <main class="hero" aria-labelledby="hero-heading">
+      <div class="hero-left">
+        <span class="eyebrow">As heard on the radio</span>
+        <h1 id="hero-heading">Fast, Friendly Support — Call Now</h1>
+        <p class="lead">When radio tells them to call, make it easy. One number, immediate connection, expert support — perfect for radio spots and live reads.</p>
+
+        <div class="phone-large" role="navigation" aria-label="Primary phone call to action">
+          <div class="phone-pill" style="min-width:220px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#0B71F0" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 .95-.27c1.05.27 2.18.42 3.35.42a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 4a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 1c0 1.17.15 2.3.42 3.35.12.45 0 .95-.27.95l-2.2 2.2z"></path></svg>
+            <div>
+              <div style="font-size:12px;color:var(--muted)">Toll-Free</div>
+              <div class="num">+1 (888) 264-2385</div>
+            </div>
+          </div>
+
+          <a class="btn btn-primary" href="tel:+18882642385" id="cta-call" aria-label="Tap to call +1 888 264 2385">
+            <span style="font-weight:800">Tap to Call</span>
+            <span style="opacity:0.9">+1 (888) 264-2385</span>
+          </a>
+
+          <button class="btn btn-ghost" id="open-schedule" aria-haspopup="dialog">Request a Callback</button>
+        </div>
+
+        <div class="benefits" aria-hidden="false">
+          <div class="benefit">No hold music — real agents</div>
+          <div class="benefit">24/7 coverage</div>
+          <div class="benefit">Scripted for radio reads</div>
+        </div>
+
+        <div class="section" style="padding-top:18px;">
+          <strong>Quick radio script (15s):</strong>
+          <p class="muted" style="margin:8px 0 0 0">
+            "Need help now? Call toll free <strong>+1 (888) 264-2385</strong> — that’s 8 8 8, 2 6 4, 2 3 8 5. Operators standing by."
+          </p>
+        </div>
+      </div>
+
+      <aside class="card" aria-labelledby="form-heading">
+        <h3 class="form-title" id="form-heading">Get a callback — or call now</h3>
+        <p class="muted" style="margin:6px 0 12px 0">Fill this quick form and we'll call you back ASAP. Or tap the button above to dial instantly.</p>
+
+        <form id="leadForm" novalidate>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" placeholder="Jane Doe" required>
+
+          <label for="email">Email <span class="muted" style="font-weight:600">(optional)</span></label>
+          <input id="email" name="email" type="email" placeholder="you@example.com">
+
+          <label for="phone">Best Phone to Reach You</label>
+          <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" required>
+
+          <label for="reason">Reason (optional)</label>
+          <select id="reason" name="reason">
+            <option value="">Select...</option>
+            <option>Technical Support</option>
+            <option>Billing</option>
+            <option>General Inquiry</option>
+            <option>Other</option>
+          </select>
+
+          <div style="display:flex;gap:10px;margin-top:12px;">
+            <button type="submit" class="btn btn-primary" aria-label="Submit request for callback">Request Callback</button>
+            <a href="tel:+18882642385" class="btn btn-ghost" style="align-self:center;">Call Now</a>
+          </div>
+
+          <p class="small">By submitting you agree to be contacted at the phone number provided. Standard call rates may apply.</p>
+        </form>
+      </aside>
+    </main>
+
+    <section class="section" aria-label="features">
+      <h3 style="margin:0 0 12px 0">Why this number works for radio</h3>
+      <div class="features-grid" role="list">
+        <div class="feature-card" role="listitem">
+          <h4>Memorable TFN</h4>
+          <p>Short, repeated digits read clearly during ads — proven to lift response.</p>
+        </div>
+        <div class="feature-card" role="listitem">
+          <h4>Immediate answer</h4>
+          <p>Designed so callers reach a live agent quickly — reduces dropoff from live radio traffic.</p>
+        </div>
+        <div class="feature-card" role="listitem">
+          <h4>24/7 routing</h4>
+          <p>Options to route calls by time-of-day or campaign are supported by most TFN providers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="testimonials">
+      <h3 style="margin:0 0 12px 0">Radio spot results</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="card" style="padding:14px">
+          <strong>“We ran 30s spots — calls tripled.”</strong>
+          <p class="muted" style="margin-top:8px">— Local HVAC company</p>
+        </div>
+        <div class="card" style="padding:14px">
+          <strong>“Clear read and immediate booking.”</strong>
+          <p class="muted" style="margin-top:8px">— Roofing & Repairs</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Radio Support Hotline</div>
+      <div class="muted">Privacy • Terms • Call: <strong>+1 (888) 264-2385</strong></div>
+    </footer>
+  </div>
+
+  <!-- modal markup -->
+  <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <h3 style="margin-top:0">Request a Callback</h3>
+      <p class="muted">Enter your number below and we'll call you within the hour (or sooner).</p>
+
+      <form id="modalForm" style="margin-top:12px">
+        <label for="mname">Name</label>
+        <input id="mname" name="mname" type="text" placeholder="Jane Doe" required>
+
+        <label for="mphone">Phone</label>
+        <input id="mphone" name="mphone" type="tel" placeholder="(555) 555-5555" required>
+
+        <div style="display:flex;gap:8px;margin-top:12px;">
+          <button type="submit" class="btn btn-primary">Request Callback</button>
+          <button type="button" class="btn btn-ghost" id="modalCancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Accessibility / small scripts
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Basic phone input mask (lightweight)
+    function maskPhone(value){
+      // removes non-digits
+      const digits = value.replace(/\D/g,'').slice(0,10);
+      const len = digits.length;
+      if(len <=3) return digits;
+      if(len <=6) return '('+digits.slice(0,3)+') '+digits.slice(3);
+      return '('+digits.slice(0,3)+') '+digits.slice(3,6)+'-'+digits.slice(6);
+    }
+
+    // jQuery interactions
+    $(function(){
+      // mask on input fields
+      $('#phone, #mphone').on('input', function(){
+        const cur = $(this).val();
+        $(this).val(maskPhone(cur));
+      });
+
+      // open modal
+      $('#open-schedule').on('click', function(){
+        $('#modal').css('display','flex').attr('aria-hidden','false');
+        $('#mname').focus();
+      });
+
+      // close modal
+      $('#modalCancel').on('click', function(){
+        $('#modal').hide().attr('aria-hidden','true');
+      });
+
+      // close modal when clicking outside dialog
+      $('#modal').on('click', function(e){
+        if(e.target === this){
+          $(this).hide().attr('aria-hidden','true');
+        }
+      });
+
+      // form submit handlers (simulated)
+      $('#leadForm').on('submit', function(evt){
+        evt.preventDefault();
+        // basic front-end validation
+        const name = $('#name').val().trim();
+        const phone = $('#phone').val().trim();
+        if(!name || !phone){ alert('Please enter your name and phone number.'); return; }
+
+        // simulate ajax submission
+        // Replace this with real AJAX to your server or third-party
+        $(this).find('button[type="submit"]').prop('disabled',true).text('Sending...');
+        setTimeout(() => {
+          $(this).find('button[type="submit"]').prop('disabled',false).text('Request Callback');
+          alert('Thanks, '+name+' — we will call you at '+phone+' shortly. For immediate help, call +1 (888) 264-2385.');
+          $('#leadForm')[0].reset();
+        }, 900);
+      });
+
+      $('#modalForm').on('submit', function(evt){
+        evt.preventDefault();
+        const name = $('#mname').val().trim();
+        const phone = $('#mphone').val().trim();
+        if(!name || !phone){ alert('Please enter name and phone.'); return; }
+        $(this).find('button[type="submit"]').prop('disabled',true).text('Requesting...');
+        setTimeout(() => {
+          alert('Callback requested. We will call '+phone+' shortly. To call now, dial +1 (888) 264-2385.');
+          $('#modal').hide().attr('aria-hidden','true');
+          $('#modalForm')[0].reset();
+          $(this).find('button[type="submit"]').prop('disabled',false).text('Request Callback');
+        }, 900);
+      });
+
+      // optional: tiny click-to-call analytics stub
+      $('#cta-call, header a[href^="tel:"]').on('click', function(){
+        // fire a small tracking event (replace with gtag/fetch to server)
+        console.log('Call CTA clicked - TFN: +1 (888) 264-2385');
+      });
+    });
+  </script>
+</body>
+</html>
