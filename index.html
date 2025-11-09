@@ -1,302 +1,481 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>How to Get Radio Support Service — Complete Guide</title>
-  <meta name="description" content="A beautiful, responsive, blog-style guide on how to get radio support service: what to expect, how to choose a provider, pricing, FAQs, and a contact form."/>
-  <meta name="author" content="Your Brand"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Call now for support — fast, friendly help. TFN: +1 (888) 848-6678" />
+  <title>Call Now — +1 (888) 848-6678 | Fast Support</title>
+
+  <!-- Basic schema for TFN -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Radio Support Hotline",
+    "telephone": "+1-888-264-2385",
+    "url": "https://yourdomain.example"
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- jQuery (CDN) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-3gJwYp4/0+JW4oZqU5eQv+0q6Xc0Vb2u0E2b0iJT7n4=" crossorigin="anonymous"></script>
+
   <style>
     :root{
-      --bg: #0b1020;
-      --bg-soft: #0f1530;
-      --card: #121936;
-      --text: #eef2ff;
-      --muted: #b6c2ff;
-      --brand: #7c9eff;
-      --brand-2:#8be9fd;
-      --accent:#c084fc;
-      --ring: rgba(124,158,255,.4);
-      --success: #22c55e;
-      --warning: #f59e0b;
-      --danger: #ef4444;
-      --shadow: 0 10px 30px rgba(20, 24, 62, 0.6), 0 2px 8px rgba(0,0,0,.3);
+      --accent:#0B71F0;
+      --accent-dark:#0654C7;
+      --muted:#6b7280;
+      --bg:#f7fbff;
+      --card:#ffffff;
+      --radius:14px;
+      --max-width:1100px;
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg: #f6f7fb;
-        --bg-soft: #ffffff;
-        --card: #ffffff;
-        --text: #0e1325;
-        --muted: #4b5563;
-        --brand: #335ef7;
-        --brand-2:#06b6d4;
-        --accent:#7c3aed;
-        --ring: rgba(51,94,247,.25);
-        --shadow: 0 8px 24px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
-      }
-    }
-
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-      color:var(--text);
-      background: radial-gradient(1200px 800px at 20% -10%, rgba(124,158,255,.20), transparent 60%),
-                  radial-gradient(1000px 600px at 100% 0%, rgba(139,233,253,.15), transparent 60%),
-                  linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
-      line-height:1.65;
-      letter-spacing: .1px;
+      background:linear-gradient(180deg, var(--bg), #ffffff);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
     }
 
-    /* Layout */
-    .container{max-width:1100px;margin-inline:auto;padding:28px}
-    header.site-header{position:sticky;top:0;z-index:50;background:linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(15,21,48,.7) 100%);backdrop-filter: blur(10px)}
-    .nav{display:flex;gap:16px;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
-    .brand .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow: var(--shadow);display:grid;place-items:center}
-    .brand .logo svg{width:20px;height:20px;fill:white}
-    .brand span{font-weight:800;font-size:1.05rem;letter-spacing:.4px}
-    nav .links{display:flex;gap:18px;flex-wrap:wrap}
-    nav .links a{color:var(--muted);text-decoration:none;font-weight:600;opacity:.95}
-    nav .links a:hover{color:var(--text)}
-
-    .btn{appearance:none;border:0;border-radius:16px;padding:10px 16px;font-weight:700;letter-spacing:.3px;cursor:pointer;transition:.2s transform,.2s box-shadow,.2s background}
-    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:white;box-shadow:var(--shadow)}
-    .btn-primary:hover{transform:translateY(-1px)}
-
-    /* Hero */
-    .hero{padding:80px 28px 40px}
-    .hero-inner{display:grid;grid-template-columns: 1.2fr .8fr;gap:38px;align-items:center}
-    .hero h1{font-size: clamp(2rem, 3.8vw, 3.2rem);line-height:1.1;margin:0 0 14px}
-    .hero p{margin:0 0 22px;color:var(--muted);font-size:1.05rem}
-    .hero-card{background: linear-gradient(180deg, rgba(124,158,255,.10) 0%, rgba(0,0,0,0) 100%), var(--card);border:1px solid rgba(124,158,255,.12);padding:22px;border-radius:22px;box-shadow:var(--shadow)}
-    .hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
-    .metric{background:rgba(124,158,255,.10);border:1px solid rgba(124,158,255,.16);border-radius:16px;padding:14px 16px}
-    .metric h4{margin:0;font-size:1.6rem}
-    .metric span{display:block;color:var(--muted);font-size:.9rem}
-
-    /* Content */
-    article.blog{background:transparent}
-    .prose{max-width:780px;margin-inline:auto}
-    .prose h2{font-size:clamp(1.4rem,2.5vw,2rem);margin:36px 0 12px}
-    .prose h3{font-size:1.2rem;margin:26px 0 6px}
-    .prose p{color:var(--text);opacity:.95}
-    .note{border-left:4px solid var(--brand);background:linear-gradient(0deg, rgba(124,158,255,.08), rgba(124,158,255,.04));padding:14px 16px;border-radius:12px;margin:18px 0}
-
-    .grid{display:grid;gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    @media (max-width: 980px){
-      .hero-inner{grid-template-columns:1fr}
-      .grid.cols-3{grid-template-columns:1fr}
-      .grid.cols-2{grid-template-columns:1fr}
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      margin:0 auto;
     }
 
-    .card{background:var(--card);border:1px solid rgba(124,158,255,.14);border-radius:22px;padding:20px;box-shadow: var(--shadow)}
-    .card h3{margin-top:0}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;font-size:.8rem;font-weight:700;color:white;background:linear-gradient(135deg,var(--brand),var(--brand-2))}
-
-    .checklist{list-style:none;padding:0;margin:0}
-    .checklist li{display:flex;align-items:flex-start;gap:10px;margin:10px 0}
-    .checklist svg{flex:0 0 18px;margin-top:2px}
-
-    .table{width:100%;border-collapse:separate;border-spacing:0;border-radius:16px;overflow:hidden;border:1px solid rgba(124,158,255,.16)}
-    .table th,.table td{padding:14px 16px;text-align:left}
-    .table thead th{background:linear-gradient(0deg, rgba(124,158,255,.10), rgba(124,158,255,.04))}
-    .table tbody tr:nth-child(odd){background:rgba(124,158,255,.05)}
-    .badge{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.75rem;font-weight:700;background:rgba(34,197,94,.15);color:var(--success)}
-
-    /* FAQ */
-    .faq{margin-top:10px}
-    details{background:var(--card);border:1px solid rgba(124,158,255,.14);border-radius:16px;padding:14px 16px;margin:12px 0;box-shadow: var(--shadow)}
-    details[open]{outline:2px solid var(--ring)}
-    summary{cursor:pointer;font-weight:700}
-
-    /* CTA Banner */
-    .cta{margin:40px auto 10px;background:linear-gradient(135deg, rgba(124,158,255,.18), rgba(192,132,252,.22));border:1px solid rgba(124,158,255,.25);border-radius:24px;padding:24px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center}
-
-    /* Contact form */
-    form{display:grid;gap:12px}
-    label{font-weight:700}
-    input, select, textarea{width:100%;border:1px solid rgba(124,158,255,.25);background:rgba(124,158,255,.07);color:var(--text);padding:12px 14px;border-radius:12px}
-    input:focus, select:focus, textarea:focus{outline:2px solid var(--ring)}
-
-    /* Footer */
-    footer{margin-top:60px;padding:30px 0;color:var(--muted)}
-    .footer-grid{display:grid;gap:18px;grid-template-columns:2fr 1fr 1fr}
-    .footer-grid a{color:var(--muted);text-decoration:none}
-    .footer-grid a:hover{color:var(--text)}
-    @media(max-width:900px){
-      .footer-grid{grid-template-columns:1fr}
+    .hero{
+      background:linear-gradient(90deg, rgba(11,113,240,0.06), rgba(6,84,199,0.03));
+      border-radius:var(--radius);
+      padding:36px;
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:28px;
+      align-items:center;
+      box-shadow: 0 6px 30px rgba(11,71,150,0.06);
     }
 
-    /* Utility */
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    .mb-0{margin-bottom:0}
-    .mt-0{margin-top:0}
+    /* left hero */
+    .hero-left h1{
+      margin:0 0 8px 0;
+      font-size: clamp(28px, 3.6vw, 44px);
+      line-height:1.02;
+      letter-spacing:-0.02em;
+    }
+    .eyebrow{
+      display:inline-block;
+      background:rgba(11,113,240,0.12);
+      color:var(--accent-dark);
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:13px;
+      margin-bottom:12px;
+    }
+    .lead{
+      margin:16px 0 22px 0;
+      color:var(--muted);
+      font-size:16px;
+    }
+    .phone-large{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:16px;
+      flex-wrap:wrap;
+    }
+    .phone-pill{
+      background:var(--card);
+      border-radius:12px;
+      padding:12px 18px;
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      box-shadow:0 6px 18px rgba(11,71,150,0.06);
+    }
+    .phone-pill .num{
+      font-weight:800;
+      font-size:20px;
+      color:var(--accent-dark);
+    }
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 18px;
+      border-radius:12px;
+      font-weight:700;
+      text-decoration:none;
+      cursor:pointer;
+      border:none;
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{
+      background:linear-gradient(180deg,var(--accent),var(--accent-dark));
+      color:white;
+      box-shadow: 0 8px 28px rgba(11,113,240,0.18);
+    }
+    .btn-ghost{
+      background:transparent;
+      color:var(--accent-dark);
+      border:1px solid rgba(11,113,240,0.12);
+      padding:10px 14px;
+    }
+
+    .benefits{
+      display:flex;
+      gap:12px;
+      margin-top:18px;
+      flex-wrap:wrap;
+    }
+    .benefit{
+      background:var(--card);
+      border-radius:10px;
+      padding:10px 12px;
+      box-shadow:0 6px 18px rgba(2,6,23,0.03);
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    /* right hero (form) */
+    .card{
+      background:linear-gradient(180deg,#ffffff,#fbfdff);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 8px 30px rgba(2,6,23,0.04);
+    }
+    .form-title{
+      font-weight:700;
+      margin:0 0 8px 0;
+    }
+    label{display:block;font-size:13px;margin:10px 0 6px;color:var(--muted)}
+    input[type="text"], input[type="email"], input[type="tel"], textarea, select{
+      width:100%;
+      padding:12px;
+      border-radius:10px;
+      border:1px solid #e6eefc;
+      outline:none;
+      font-size:15px;
+      background:#fbfdff;
+    }
+    textarea{min-height:90px; resize:vertical}
+    .small{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:8px;
+    }
+
+    /* section styles */
+    .section{
+      margin-top:26px;
+      padding:26px;
+      border-radius:12px;
+      background:transparent;
+    }
+
+    .features-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+    .feature-card{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(2,6,23,0.03);
+    }
+    .feature-card h4{margin:0 0 8px 0}
+    .feature-card p{margin:0;color:var(--muted)}
+
+    /* footer */
+    footer{
+      margin-top:20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* modal */
+    .modal-backdrop{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(2,6,23,0.5);
+      align-items:center;
+      justify-content:center;
+      z-index:1200;
+      padding:24px;
+    }
+    .modal{
+      background:white;
+      border-radius:12px;
+      width:100%;
+      max-width:520px;
+      padding:20px;
+      box-shadow:0 20px 60px rgba(2,6,23,0.35);
+    }
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr; padding:22px}
+      .features-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      body{padding:14px}
+      .features-grid{grid-template-columns:1fr}
+      .hero-left h1{font-size:26px}
+      .phone-pill .num{font-size:18px}
+    }
+
+    /* tiny helper */
+    .muted{color:var(--muted)}
+    .badge{background:rgba(34,197,94,0.12); color:#166534; padding:6px 10px; border-radius:999px; font-weight:700; font-size:13px}
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container nav" role="navigation" aria-label="Primary">
-      <a href="#top" class="brand">
-        <span class="logo" aria-hidden="true">
-          <!-- Radio Tower Icon -->
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a1 1 0 0 1 1 1v2.06a7 7 0 0 1 5.94 5.94H21a1 1 0 1 1 0 2h-2.06A7 7 0 0 1 13 18.94V21a1 1 0 1 1-2 0v-2.06A7 7 0 0 1 5.06 11H3a1 1 0 1 1 0-2h2.06A7 7 0 0 1 11 5.06V3a1 1 0 0 1 1-1Zm0 6a5 5 0 1 0 0 10A5 5 0 0 0 12 8Z"/></svg>
-        </span>
-        <span>Radio Support Guide</span>
-      </a>
-      <nav class="links" aria-label="Sections">
-        <a href="#start">Start</a>
-        <a href="#types">Types</a>
-        <a href="#steps">Steps</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact" class="btn btn-primary">Get Help</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero" id="start">
-    <div class="container hero-inner">
-      <div>
-        <p class="eyebrow">Your complete, no‑stress guide</p>
-        <h1>How to Get Reliable <span style="background:linear-gradient(135deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">Radio Support Service</span></h1>
-        <p>Whether you run events, manage a fleet, operate an amateur radio setup, or broadcast on air, this blog walks you through choosing the right radio support service—setup, maintenance, licensing guidance, and fast troubleshooting included.</p>
-        <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn btn-primary" href="#contact">Request a Callback</a>
-          <a class="btn" style="background:rgba(124,158,255,.12);color:white;border:1px solid rgba(124,158,255,.22)" href="#steps">See the Steps</a>
-        </div>
-        <div class="hero-grid" aria-hidden="true">
-          <div class="metric"><h4>24/7</h4><span>Emergency Support</span></div>
-          <div class="metric"><h4>72h</h4><span>Average Setup Time</span></div>
-          <div class="metric"><h4>98%</h4><span>Issue Resolution Rate</span></div>
+  <div class="container" role="main">
+    <header style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;gap:12px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect rx='8' width='100%' height='100%' fill='%230B71F0'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='white'>RS</text></svg>" alt="logo" width="40" height="40" />
+        <div>
+          <div style="font-weight:700">Radio Support Hotline</div>
+          <div style="font-size:12px;color:#6b7280">Open 24/7 • English & Spanish</div>
         </div>
       </div>
-      <div class="hero-card" aria-label="Highlights">
-        <h3 class="mt-0">What counts as “Radio Support”?</h3>
-        <p class="mb-0">Installation, programming, coverage planning, interference checks, antenna tuning, licensing assistance, firmware updates, repairs, and user training—delivered on-site or remote.</p>
+
+      <a href="tel:+18882642385" class="btn btn-ghost" aria-label="Call +1 (888) 848-6678">Call Now: +1 (888) 848-6678</a>
+    </header>
+
+    <main class="hero" aria-labelledby="hero-heading">
+      <div class="hero-left">
+        <span class="eyebrow">As heard on the radio</span>
+        <h1 id="hero-heading">Fast, Friendly Support — Call Now</h1>
+        <p class="lead">When radio tells them to call, make it easy. One number, immediate connection, expert support — perfect for radio spots and live reads.</p>
+
+        <div class="phone-large" role="navigation" aria-label="Primary phone call to action">
+          <div class="phone-pill" style="min-width:220px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#0B71F0" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 .95-.27c1.05.27 2.18.42 3.35.42a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 4a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 1c0 1.17.15 2.3.42 3.35.12.45 0 .95-.27.95l-2.2 2.2z"></path></svg>
+            <div>
+              <div style="font-size:12px;color:var(--muted)">Toll-Free</div>
+              <div class="num">+1 (888) 848-6678</div>
+            </div>
+          </div>
+
+          <a class="btn btn-primary" href="tel:+18882642385" id="cta-call" aria-label="Tap to call +1 888 264 2385">
+            <span style="font-weight:800">Tap to Call</span>
+            <span style="opacity:0.9">+1 (888) 848-6678</span>
+          </a>
+
+          <button class="btn btn-ghost" id="open-schedule" aria-haspopup="dialog">Request a Callback</button>
+        </div>
+
+        <div class="benefits" aria-hidden="false">
+          <div class="benefit">No hold music — real agents</div>
+          <div class="benefit">24/7 coverage</div>
+          <div class="benefit">Scripted for radio reads</div>
+        </div>
+
+        <div class="section" style="padding-top:18px;">
+          <strong>Quick radio script (15s):</strong>
+          <p class="muted" style="margin:8px 0 0 0">
+            "Need help now? Call toll free <strong>+1 (888) 848-6678</strong> — that’s 8 8 8, 2 6 4, 2 3 8 5. Operators standing by."
+          </p>
+        </div>
       </div>
+
+      <aside class="card" aria-labelledby="form-heading">
+        <h3 class="form-title" id="form-heading">Get a callback — or call now</h3>
+        <p class="muted" style="margin:6px 0 12px 0">Fill this quick form and we'll call you back ASAP. Or tap the button above to dial instantly.</p>
+
+        <form id="leadForm" novalidate>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" placeholder="Jane Doe" required>
+
+          <label for="email">Email <span class="muted" style="font-weight:600">(optional)</span></label>
+          <input id="email" name="email" type="email" placeholder="you@example.com">
+
+          <label for="phone">Best Phone to Reach You</label>
+          <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" required>
+
+          <label for="reason">Reason (optional)</label>
+          <select id="reason" name="reason">
+            <option value="">Select...</option>
+            <option>Technical Support</option>
+            <option>Billing</option>
+            <option>General Inquiry</option>
+            <option>Other</option>
+          </select>
+
+          <div style="display:flex;gap:10px;margin-top:12px;">
+            <button type="submit" class="btn btn-primary" aria-label="Submit request for callback">Request Callback</button>
+            <a href="tel:+18882642385" class="btn btn-ghost" style="align-self:center;">Call Now</a>
+          </div>
+
+          <p class="small">By submitting you agree to be contacted at the phone number provided. Standard call rates may apply.</p>
+        </form>
+      </aside>
+    </main>
+
+    <section class="section" aria-label="features">
+      <h3 style="margin:0 0 12px 0">Why this number works for radio</h3>
+      <div class="features-grid" role="list">
+        <div class="feature-card" role="listitem">
+          <h4>Memorable TFN</h4>
+          <p>Short, repeated digits read clearly during ads — proven to lift response.</p>
+        </div>
+        <div class="feature-card" role="listitem">
+          <h4>Immediate answer</h4>
+          <p>Designed so callers reach a live agent quickly — reduces dropoff from live radio traffic.</p>
+        </div>
+        <div class="feature-card" role="listitem">
+          <h4>24/7 routing</h4>
+          <p>Options to route calls by time-of-day or campaign are supported by most TFN providers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="testimonials">
+      <h3 style="margin:0 0 12px 0">Radio spot results</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="card" style="padding:14px">
+          <strong>“We ran 30s spots — calls tripled.”</strong>
+          <p class="muted" style="margin-top:8px">— Local HVAC company</p>
+        </div>
+        <div class="card" style="padding:14px">
+          <strong>“Clear read and immediate booking.”</strong>
+          <p class="muted" style="margin-top:8px">— Roofing & Repairs</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Radio Support Hotline</div>
+      <div class="muted">Privacy • Terms • Call: <strong>+1 (888) 848-6678</strong></div>
+    </footer>
+  </div>
+
+  <!-- modal markup -->
+  <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <h3 style="margin-top:0">Request a Callback</h3>
+      <p class="muted">Enter your number below and we'll call you within the hour (or sooner).</p>
+
+      <form id="modalForm" style="margin-top:12px">
+        <label for="mname">Name</label>
+        <input id="mname" name="mname" type="text" placeholder="Jane Doe" required>
+
+        <label for="mphone">Phone</label>
+        <input id="mphone" name="mphone" type="tel" placeholder="(555) 555-5555" required>
+
+        <div style="display:flex;gap:8px;margin-top:12px;">
+          <button type="submit" class="btn btn-primary">Request Callback</button>
+          <button type="button" class="btn btn-ghost" id="modalCancel">Cancel</button>
+        </div>
+      </form>
     </div>
-  </section>
+  </div>
 
-  <!-- Article Content -->
-  <article class="blog">
-    <div class="container prose">
+  <script>
+    // Accessibility / small scripts
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-      <section id="types" class="grid cols-3">
-        <div class="card">
-          <h3>Two‑Way & LMR (Commercial)</h3>
-          <p>Support for handhelds, mobiles, and repeaters used by logistics, hospitality, security, and construction—often on UHF/VHF with analog, DMR, NXDN, or P25 systems.</p>
-        </div>
-        <div class="card">
-          <h3>Amateur / Ham Radio</h3>
-          <p>Station build‑outs, antenna selection, feedline testing, grounding, digital modes (FT8, D‑STAR), and contest‑ready performance for licensed operators.</p>
-        </div>
-        <div class="card">
-          <h3>Broadcast & Events</h3>
-          <p>RF planning for OB vans and stages, intercoms (UHF/DECT), IFB, STL links, temporary spectrum coordination, and failover plans for live shows.</p>
-        </div>
-      </section>
+    // Basic phone input mask (lightweight)
+    function maskPhone(value){
+      // removes non-digits
+      const digits = value.replace(/\D/g,'').slice(0,10);
+      const len = digits.length;
+      if(len <=3) return digits;
+      if(len <=6) return '('+digits.slice(0,3)+') '+digits.slice(3);
+      return '('+digits.slice(0,3)+') '+digits.slice(3,6)+'-'+digits.slice(6);
+    }
 
-      <section id="steps">
-        <h2>Step‑by‑Step: Getting the Right Support</h2>
-        <ol class="card" style="padding-left:22px">
-          <li><strong>Define the use‑case:</strong> coverage area, user count, indoors/outdoors, and any high‑noise zones.</li>
-          <li><strong>Inventory your gear:</strong> radio models, firmware, batteries, headsets, antennas, repeaters, cables.</li>
-          <li><strong>Check compliance:</strong> licenses or permit requirements for your jurisdiction and band plan.</li>
-          <li><strong>Ask providers for a site survey:</strong> they should measure RSSI/SINR and assess line‑of‑sight and intermod risks.</li>
-          <li><strong>Review a written support plan:</strong> SLAs, response times, loaner units, spares, and maintenance cycles.</li>
-          <li><strong>Run a pilot:</strong> test channels/codeplugs, record call quality and dead zones before full rollout.</li>
-          <li><strong>Document & train:</strong> quick‑start guides, channel maps, and a contact tree for incidents.</li>
-        </ol>
+    // jQuery interactions
+    $(function(){
+      // mask on input fields
+      $('#phone, #mphone').on('input', function(){
+        const cur = $(this).val();
+        $(this).val(maskPhone(cur));
+      });
 
-        <div class="grid cols-2">
-          <div class="card">
-            <h3>What a Good Provider Delivers</h3>
-            <ul class="checklist">
-              <li>
-                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-                Coverage heatmaps and interference analysis.
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-                Codeplug programming and fleet templates.
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-                On‑site installation, testing & training.
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-                SLA‑backed support with spares and loaners.
-              </li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Questions to Ask</h3>
-            <ul class="checklist">
-              <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>What radios & bands do you specialize in (UHF/VHF/700‑800MHz)?</li>
-              <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Do you provide licensing guidance and frequency coordination?</li>
-              <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>What’s your average response time and escalation path?</li>
-              <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Can you share references from similar deployments?</li>
-            </ul>
-          </div>
-        </div>
+      // open modal
+      $('#open-schedule').on('click', function(){
+        $('#modal').css('display','flex').attr('aria-hidden','false');
+        $('#mname').focus();
+      });
 
-        <div class="note"><strong>Pro tip:</strong> Ask for a <em>codeplug backup</em> and a simple change‑request process so channel updates don’t break your fleet.</div>
-      </section>
+      // close modal
+      $('#modalCancel').on('click', function(){
+        $('#modal').hide().attr('aria-hidden','true');
+      });
 
-      <section id="pricing">
-        <h2>Typical Pricing (Guidance)</h2>
-        <p class="note">Actual costs vary by region and project scope. Use this table for rough planning.</p>
-        <div class="card" role="region" aria-label="Pricing table">
-          <table class="table" aria-describedby="pricing-desc">
-            <thead>
-              <tr>
-                <th>Service</th>
-                <th>What’s Included</th>
-                <th>Typical Cost</th>
-                <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Site Survey</td>
-                <td>Coverage tests, interference scan, report</td>
-                <td>$300–$1,200</td>
-                <td><span class="badge">One‑time</span></td>
-              </tr>
-              <tr>
-                <td>Install & Programming</td>
-                <td>Mounts, antennas, power, codeplugs</td>
-                <td>$80–$150/hr</td>
-                <td>+ materials</td>
-              </tr>
-              <tr>
-                <td>Managed Support (SLA)</td>
-                <td>Helpdesk, spares, firmware, on‑site visits</td>
-                <td>$40–$90/radio/mo</td>
-                <td>Tiered by response time</td>
-              </tr>
-              <tr>
-                <td>Emergency Call‑out</td>
-                <td>After‑hours fix, loaner units</td>
-                <td>$250–$600</td>
-                <td>Within service area</td>
-              </tr>
-            </tbody>
-          </table>
-          <p id="pricing-desc" class="sr-only">Pricing examples to estimate budgets for radio support services.</p>
-        </div>
-      </section>
+      // close modal when clicking outside dialog
+      $('#modal').on('click', function(e){
+        if(e.target === this){
+          $(this).hide().attr('aria-hidden','true');
+        }
+      });
 
-      <section>
-        <h2>Provider Shortlist Checklist</h
+      // form submit handlers (simulated)
+      $('#leadForm').on('submit', function(evt){
+        evt.preventDefault();
+        // basic front-end validation
+        const name = $('#name').val().trim();
+        const phone = $('#phone').val().trim();
+        if(!name || !phone){ alert('Please enter your name and phone number.'); return; }
+
+        // simulate ajax submission
+        // Replace this with real AJAX to your server or third-party
+        $(this).find('button[type="submit"]').prop('disabled',true).text('Sending...');
+        setTimeout(() => {
+          $(this).find('button[type="submit"]').prop('disabled',false).text('Request Callback');
+          alert('Thanks, '+name+' — we will call you at '+phone+' shortly. For immediate help, call +1 (888) 848-6678.');
+          $('#leadForm')[0].reset();
+        }, 900);
+      });
+
+      $('#modalForm').on('submit', function(evt){
+        evt.preventDefault();
+        const name = $('#mname').val().trim();
+        const phone = $('#mphone').val().trim();
+        if(!name || !phone){ alert('Please enter name and phone.'); return; }
+        $(this).find('button[type="submit"]').prop('disabled',true).text('Requesting...');
+        setTimeout(() => {
+          alert('Callback requested. We will call '+phone+' shortly. To call now, dial +1 (888) 848-6678.');
+          $('#modal').hide().attr('aria-hidden','true');
+          $('#modalForm')[0].reset();
+          $(this).find('button[type="submit"]').prop('disabled',false).text('Request Callback');
+        }, 900);
+      });
+
+      // optional: tiny click-to-call analytics stub
+      $('#cta-call, header a[href^="tel:"]').on('click', function(){
+        // fire a small tracking event (replace with gtag/fetch to server)
+        console.log('Call CTA clicked - TFN: +1 (888) 848-6678');
+      });
+    });
+  </script>
+</body>
+</html>
